@@ -1,3 +1,4 @@
+/* Importação de Fonte */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 body {
@@ -5,6 +6,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+/* Esse asteristico é uma aplicação global */
 body * {
     box-sizing: border-box;
 
@@ -14,8 +16,14 @@ body * {
     width: 100vw;
     height: 100vh;
     background: #201b2c;
-    display: flex;
+    /* Para organizar o conteúdo dentro da div usamos o display.
+    O display pode ter vários valores, pode ser flex, box, inline flex, grid.
+    Usamos o flex, o flex faz com que as coisas fiquem lado a lado */
+    display: flex;  
+    /* justify-content: center; centraliza as coisas no eixo x.
+    Ele pode ser flex-start, flex-end, center, space between, space around */
     justify-content: center;
+    /* align-items: center; centraliza as coisas no eixo y */
     align-items: center;
 }
 
@@ -25,14 +33,18 @@ body * {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* flex-direction: column; faz com que o título fiquem em cima da imagem */
     flex-direction: column;
 }
 
+/* Chamando elementos dentro da class */
 .left-login > h1 {
+    /* font-size: 3vw; é para a responsividade do título */
     font-size: 3vw;
     color: #77ffc0;
 }
 
+/* Essa classe é para a responsividade da imagem */
 .left-login-image {
     width: 35vw;
 }
@@ -46,6 +58,8 @@ body * {
 }
 
 .card-login {
+    /* width: 60%; pega o tamanho da div que está card-login.
+    Vai pegar 60% desse 50vh e tomar como tamanho */
     width: 60%;
     display: flex;
     justify-content: center;
@@ -54,16 +68,19 @@ body * {
     padding: 30px 35px;
     background: #2f2841;
     border-radius: 20px;
+    /* O terceiro valor de box-shadow é o blur */
     box-shadow: 0px 10px 40px #00000056;
 }
 
 .card-login > h1 {
     color: #00ff88;
+    /* font-weight é a grossura da fonte */
     font-weight: 800;
     margin: 0;
 }
 
 .textfield {
+    /* width: 100%; faz com que o button acompanhe os input em tamanho */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -81,10 +98,13 @@ body * {
     color: #f0ffffde;
     font-size: 12pt;
     box-shadow: 0px 10px 40px #00000056;
+    /* outline: none; tira o contornado dos input */
     outline: none;
+    /* box-sizing: border-box; cria uma "colisão" entre as div pai e filho, a div pai prevalece.*/
     box-sizing: border-box;
 }
 
+/* label é texto usuário e senha que fica fora da caixa */
 .textfield > label {
     color: #f0ffffde;
     margin-bottom: 10px;
@@ -106,10 +126,12 @@ body * {
     letter-spacing: 3px;
     color: #2b134b;
     background: #00ff88;
+    /* cursor: pointer; muda para um cursos de ação, a "mãozinha"*/
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
 }
 
+/* Enquanto for uma tela de 950px, aplique as propriedades abaixo */
 @media only screen and (max-width: 950px) {
     .card-login {
         width: 85%;
@@ -122,6 +144,7 @@ body * {
 
     }
 
+    /* display: none; oculta o título */
     .left-login > h1 {
         display: none;
     }

@@ -8,20 +8,25 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="main-login">
+    <!-- A div main engloba as div left e right -->
+    <div class="main-login"> 
         <div class="left-login">
             <h1>Faça login<br>E entre para  o nosso time</h1>
+            <!-- Pegue essa imagem animada em https://storyset.com/ -->
             <img src="aula.svg" class="left-login-image" alt="aula">
         </div>
         <div class="right-login">
             <div class="card-login">
                 <h1>LOGIN</h1>
-                <div class="textfield">
+                <!-- A div textfield engloba tanto a label como o input -->
+                <div class="textfield"> 
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <!-- placeholder é o texto que fica dentro do input, no caso usuário ou senha-->
+                    <input type="text" name="usuario" placeholder="Usuário"> 
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
+                    <!-- O tipo de input type="password" faz com que a senha fique oculta na hora de digitar -->
                     <input type="password" name="senha" placeholder="Senha">
                 </div>
                 <button class="btn-login">Login</button>
